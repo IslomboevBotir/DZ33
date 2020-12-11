@@ -3,18 +3,18 @@
 #define N 50
 
 int teor_con(int edge, int point, int *vert, int *arr)
-	{
-		int i, check, j, k = 0;
-		vert = (int *)malloc(2*edge*sizeof(int));
-		if(vert == NULL)
 		{
-			printf("Memory is over...\n");
-			exit(709);
-		}
-   	        check = 0;
-    		for(i = 0; i < point; i++)
-		{
-    			for(j = 0; j < edge; j++)
+			int i, check, j, k = 0;
+			vert = (int *)malloc(2*edge*sizeof(int));
+			if(vert == NULL)
+			{
+				printf("Memory is over...\n");
+				exit(709);
+			}
+			check = 0;
+			for(i = 0; i < point; i++)
+			{
+				for(j = 0; j < edge; j++)
 		{
     		if(arr[i+j*point] == 1)
 			{
@@ -217,7 +217,7 @@ int main(void)
 				}
 			}
     	break;
-   		default:
+   			default:
     			printf("Unknown operation...\n");
     			exit(99);
     	break;
